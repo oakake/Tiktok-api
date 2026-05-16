@@ -3,7 +3,6 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const multer = require('multer');
-const fetch = require('node-fetch');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
@@ -14,9 +13,9 @@ app.use(cookieParser());
 app.use(cors());
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
-const CLIENT_KEY    = process.env.TIKTOK_CLIENT_KEY    || 'YOUR_CLIENT_KEY';
-const CLIENT_SECRET = process.env.TIKTOK_CLIENT_SECRET || 'YOUR_CLIENT_SECRET';
-const REDIRECT_URI  = process.env.TIKTOK_REDIRECT_URI  || 'http://localhost:5000/auth/callback';
+const CLIENT_KEY    = process.env.TIKTOK_CLIENT_KEY    || 'sbawp6h7s167f8zv35';
+const CLIENT_SECRET = process.env.TIKTOK_CLIENT_SECRET || 'fFv3v4jYNth8iTpb7NSwTsLUMMZl78Oc';
+const REDIRECT_URI  = process.env.TIKTOK_REDIRECT_URI  || 'https://tiktok-api-vxmk.onrender.com/auth/callback';
 
 // ─── STORAGE (in-memory; use a DB in production) ──────────────────────────────
 const tokenStore = {}; // { [userId]: { access_token, refresh_token, expires_at } }
