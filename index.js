@@ -14,9 +14,9 @@ app.use(cookieParser());
 app.use(cors());
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
-const CLIENT_KEY    = process.env.TIKTOK_CLIENT_KEY    || 'aw81phu3v1l68tju';
-const CLIENT_SECRET = process.env.TIKTOK_CLIENT_SECRET || 'iM9cXhvDpnOlj916H0TQtobyoik6McWf';
-const REDIRECT_URI  = process.env.TIKTOK_REDIRECT_URI  || 'https://6647-2403-6200-8830-9bae-e066-9c54-f866-2814.ngrok-free.app/auth/callback';
+const CLIENT_KEY    = process.env.TIKTOK_CLIENT_KEY    || 'YOUR_CLIENT_KEY';
+const CLIENT_SECRET = process.env.TIKTOK_CLIENT_SECRET || 'YOUR_CLIENT_SECRET';
+const REDIRECT_URI  = process.env.TIKTOK_REDIRECT_URI  || 'http://localhost:5000/auth/callback';
 
 // ─── STORAGE (in-memory; use a DB in production) ──────────────────────────────
 const tokenStore = {}; // { [userId]: { access_token, refresh_token, expires_at } }
